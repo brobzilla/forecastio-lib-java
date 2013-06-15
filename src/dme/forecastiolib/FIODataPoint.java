@@ -471,7 +471,7 @@ public class FIODataPoint {
 	}
 
 	private String asString(Object obj){
-		return String.valueOf(obj);
+		return String.valueOf(obj).replace("\"", "");
 	}
 
 }//public class - end
