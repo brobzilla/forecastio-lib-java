@@ -119,6 +119,18 @@ public class FIODataPoint {
 		return time;
 	}
 
+    /**
+	 * Returns the time at which this data point occurs.
+	 * For more information refer to the API Docs:
+	 * <a href="https://developer.forecast.io">https://developer.forecast.io</a>
+	 * @return time miliseconds
+	 */
+	public Long timeMilli(){
+		Long t = Long.parseLong( String.valueOf(this.datapoint.get("time")) );
+		return t * 1000;
+	}
+
+
 	/**
 	 * Returns a human-readable text summary of the data point.
 	 * For more information refer to the API Docs:
